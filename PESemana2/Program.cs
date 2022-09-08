@@ -12,7 +12,9 @@ public class Program
         WaitForUser();
         DivisionValores(LeeValores("division"));
         WaitForUser();
-        ModuloValores(LeeValores("multiplicacion"));
+        MultiplicacionValores(LeeValores("multiplicaion"));
+        WaitForUser();
+        ModuloValores(LeeValores("modulo"));
     }
 
     public static void WaitForUser()
