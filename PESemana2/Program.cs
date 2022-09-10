@@ -6,15 +6,11 @@ public class Program
     public static void Main()
     {
        
-        SumaValores(LeeValores("suma"));
-        WaitForUser();
-        RestaValores(LeeValores("resta"));
-        WaitForUser();
-        DivisionValores(LeeValores("division"));
-        WaitForUser();
-        MultiplicacionValores(LeeValores("multiplicaion"));
-        WaitForUser();
-        ModuloValores(LeeValores("modulo"));
+        SumaValores();
+        RestaValores();
+        DivisionValores();
+        MultiplicacionValores();
+        ModuloValores();
     }
 
     public static void WaitForUser()
@@ -24,34 +20,44 @@ public class Program
         Console.Clear();
     }
 
-    public static void MultiplicacionValores(int[] valores)
+    public static void MultiplicacionValores()
     {
+        int[] valores = LeeValores("multiplicaión");
         int multi = valores[0] * valores[1];
         ImprimeResultado("La multiplicaión de los dos números es", multi);
+        WaitForUser();
     }
 
-    public static void ModuloValores(int[] valores)
+    public static void ModuloValores()
     {
+        int[] valores = LeeValores("modulo");
         int mod = valores[0] % valores[1];
         ImprimeResultado("El modulo de los dos números es", mod);
+        WaitForUser();
     }
 
-    public static void DivisionValores(int[] valores)
+    public static void DivisionValores()
     {
+        int[] valores = LeeValores("division");
         int div = valores[0] / valores[1];
         ImprimeResultado("La división de los dos números es ", div);
+        WaitForUser();
     }
 
-    public static void SumaValores(int[] valores)
+    public static void SumaValores()
     {
+        int[] valores = LeeValores("suma");
         int suma = valores[0] + valores[1];
         ImprimeResultado("La suma de los dos números es", suma);
+        WaitForUser();
     }
 
-    public static void RestaValores(int[] valores)
+    public static void RestaValores()
     {
+        int[] valores = LeeValores("resta");
         int resta = valores[0] - valores[1];
         ImprimeResultado("La resta de los dos números es", resta);
+        WaitForUser();
     }
 
     public static int[] LeeValores(string operacion)
